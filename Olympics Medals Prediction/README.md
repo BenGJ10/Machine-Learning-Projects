@@ -1,28 +1,45 @@
-# Project Overview
+# Olympic Medal Prediction
 
-Using data from historical Olympic games, We'll try to predict how many medals a country will win based on historical and current data.
+## Overview
 
-## Project Steps
+This project explores **predictive modeling of Olympic medal counts** using historical data. The goal is to estimate how many medals a country will win in upcoming Olympic games based on past performance and relevant country-level features.  
 
-1. Form a hypothesis.
-2. Find and explore the data.
-3. (If necessary) Reshape the data to predict your target.
-4. Clean the data for ML.
-5. Pick an error metric.
-6. Split your data.
-7. Train a model.
+A **Linear Regression model** was applied to analyze the relationship between historical factors and medal counts. This serves as an introductory supervised machine learning project for regression tasks.
 
-## Installation
+---
 
-* Python 3.8+
-* Python packages
-    * pandas
-    * numpy
-    * scikit-learn
-    * seaborn
+## Project Workflow
 
-## Files
-1. `Medal_Predictor.ipynb` - main project code
-2. `teams.csv` - data set used in this project
+1. **Hypothesis Formation**  
+   Assumed that a country’s historical performance and attributes (e.g., past medals, participation, resources) can help predict future medal counts.
 
-This project has been made with the help of [Dataquest](https://www.youtube.com/@Dataquestio)
+2. **Data Collection**  
+   Used the `teams.csv` dataset, containing country-level Olympic participation and medal statistics.
+
+3. **Data Exploration**  
+   - Visualized medal distributions across countries and years  
+   - Identified correlations between historical data and medal counts  
+
+4. **Data Preparation**  
+   - Handled missing values  
+   - Reshaped features for regression modeling  
+   - Scaled numerical features for consistency  
+
+5. **Model Development**  
+   - Implemented **Linear Regression** using scikit-learn  
+   - Defined performance metric (Mean Squared Error)  
+   - Split dataset into training and testing sets  
+
+6. **Evaluation**  
+   - Measured prediction accuracy  
+   - Interpreted coefficients to understand feature importance  
+
+---
+
+## Results
+
+- **Linear Regression** captured general trends in medal prediction but struggled with outliers (countries with extreme medal counts like the USA, China, Russia).  
+- Model performance showed that **historical medals** are the strongest predictor of future success.  
+- This project highlights both the **potential and limitations** of linear models in sports analytics.
+
+---
